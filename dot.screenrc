@@ -1,0 +1,69 @@
+nethack         on
+escape          ^t^t
+bell_msg        "Bell in window %n: %t"
+vbell           off
+autodetach      on
+startup_message off
+defscrollback   10240
+hardstatus      on
+hardstatus      alwayslastline "%{= Wr}[%y/%m/%d %02c] %{Wk}%-w%{BW}%n %t%{-}%+w %= %1` "
+caption         splitonly "%{.BW} >> %n %t"
+msgwait         2
+termcapinfo     xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+defbce          on
+term            xterm-256color
+
+# Key bind
+bind ^k
+bind ^\
+bind ^G
+bind \\ quit
+bind k kill
+bind / eval "scrollback 0" "scrollback 10240"
+bind . source $HOME/.screen-setting
+
+# Split
+bind -c REGION 2 split
+bind -c REGION 1 only
+bind -c REGION 0 remove
+bind -c REGION o focus
+bind -c RESIZE = eval 'resize ='  'command -c RESIZE'
+bind -c RESIZE J eval 'resize +5' 'command -c RESIZE'
+bind -c RESIZE K eval 'resize -5' 'command -c RESIZE'
+bind -c RESIZE j eval 'resize +1' 'command -c RESIZE'
+bind -c RESIZE k eval 'resize -1' 'command -c RESIZE'
+bind -c REGION r eval 'echo "j: -1 / k: +1 / other: quit"' 'command -c RESIZE'
+bind x eval 'echo "2: split / 1: only / 0: remove / o: focus r: resize"' 'command -c REGION'
+
+# App
+bind -c APP c screen -t cpan sudo cpan
+bind -c APP g screen -t gmail gmailreader.py
+bind -c APP t screen -t top top
+bind a eval 'echo "c: cpan / g: gmail / t: top"' 'command -c APP'
+
+# Window Move
+bind -c WINDOW 0 select 10
+bind -c WINDOW 1 select 11
+bind -c WINDOW 2 select 12
+bind -c WINDOW 3 select 13
+bind -c WINDOW 4 select 14
+bind -c WINDOW 5 select 15
+bind -c WINDOW 6 select 16
+bind -c WINDOW 7 select 17
+bind -c WINDOW 8 select 18
+bind -c WINDOW 9 select 19
+bind u eval 'echo "0..9: window select 10..19"' 'command -c WINDOW'
+
+markkeys h=^B:l=^F:$=^E:^D=V
+
+screen 9
+screen 8
+screen 7
+screen 6
+screen 5
+screen 4
+screen 3
+screen 2
+screen 1
+screen 0
+

@@ -1,0 +1,15 @@
+[user]
+	name = xcezx
+	email = main.xcezx@gmail.com
+[core]
+	pager = less -r
+[color]
+	ui = auto
+[alias]
+	br = branch
+	ci = commit -a
+	co = checkout
+	di = diff
+	sh = stash
+	st = status
+	sub = submodule

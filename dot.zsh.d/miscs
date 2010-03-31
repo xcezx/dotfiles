@@ -1,0 +1,15 @@
+bindkey -e
+
+HISTFILE="${ZDOTDIR}/.zhistory"
+HISTSIZE=10240
+SAVEHIST=10240
+
+DIRSTACKSIZE=24
+
+WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
+
+# vim: filetype=conf
+
+# Local Variables:
+# mode: Shell-script
+# End:

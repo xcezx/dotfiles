@@ -1,0 +1,15 @@
+ssh-agent-screen () {
+    ssh-agent sh -c 'ln -sf $SSH_AUTH_SOCK $HOME/.ssh/auth_sock && screen -r -S dev || screen -S dev'
+}
+
+ec () {
+    screen -r -X select 1
+    emacsclient -n "$@"
+}
+
+# vim: filetype=conf
+
+# Local Variables:
+# mode: Shell-script
+# End:
+
