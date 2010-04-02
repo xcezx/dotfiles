@@ -13,3 +13,5 @@
 	sh = stash
 	st = status
 	sub = submodule
+[push]
+	default = current

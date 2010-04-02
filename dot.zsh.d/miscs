@@ -8,6 +8,52 @@ DIRSTACKSIZE=24
 
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
+if [ "$WINDOW" ]; then
+    chpwd () { echo -n "_`dirs`\\" }
+    preexec () {
+        emulate -L zsh
+        local -a cmd; cmd=(${(z)2})
+        case $cmd[1] in
+            fg)
+                if (( $#cmd == 1 )); then
+                    cmd=(builtin jobs -l %+)
+                else
+                    cmd=(builtin jobs -l $cmd[2])
+                fi
+                ;;
+            %*)
+                cmd=(builtin jobs -l $cmd[1])
+                ;;
+            cd)
+                if (( $#cmd == 2 )); then
+                    cmd[1]=$cmd[2]
+                fi
+                ;&
+            *)
+                echo -n "k$cmd[1]:t\\"
+                prev=$cmd[1]
+                return
+                ;;
+        esac
+
+        local -A jt; jt=(${(kv)jobtexts})
+        $cmd >>(read num rest
+            cmd=($(z)${(e):-\$jt$num}})
+            echo -n "k$cmd[1]:t\\") 2>/dev/null
+
+        prev=$cmd[1]
+    }
+    chpwd
+fi
+
+precmd () {
+    # Set title of screen window
+    psvar=()
+    LANG=C vcs_info
+    [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
+}
+RPROMPT="%1(v|%{[00;32m%}%1v%{[00m%}|) [%~]"
+
 # vim: filetype=conf
 
 # Local Variables:
