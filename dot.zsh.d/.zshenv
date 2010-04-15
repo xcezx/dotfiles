@@ -9,6 +9,19 @@ export LS_COLORS
 
 export LANG=ja_JP.UTF-8
 
+if [ -d "/opt/local/sbin" ]; then
+    PATH=/opt/local/sbin:$PATH
+fi
+
+if [ -d "/opt/local/bin" ]; then
+    PATH=/opt/local/bin:$PATH
+fi
+
+if [ -d "$HOME/bin" ]; then
+    PATH=$HOME/bin:$PATH
+fi
+export PATH
+
 PROMPT="(%n@%M) %(!.#.$) "
 RPROMPT="[%~]"
 
