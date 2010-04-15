@@ -21,13 +21,6 @@ zstyle ':vcs_info:*' formats '(%s/%b)'
 zstyle ':vcs_info:svn:*' branchformat '%b:r%r'
 zstyle ':vcs_info:*' actionformats '(%s/%b|%a)'
 
-precmd () {
-    psvar=()
-    LANG=C vcs_info
-    [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
-}
-RPROMPT="%1(v|%{[00;32m%}%1v%{[00m%}|) [%~]"
-
 # vim: filetype=conf
 
 # Local Variables:
