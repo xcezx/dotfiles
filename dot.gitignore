@@ -1,0 +1,7 @@
+GPATH
+GRTAGS
+GSYMS
+GTAGS
+.svn
+cache/*
+log/*

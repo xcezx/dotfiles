@@ -3,6 +3,7 @@
 	email = main.xcezx@gmail.com
 [core]
 	pager = less -r
+        excludesfile = ~/.gitignore
 [color]
 	ui = auto
 [alias]
