@@ -5,7 +5,6 @@ DESTDIR = $(HOME)
 
 DOTFILES = \
 	dot.ackrc \
-	dot.emacs.d \
 	dot.gitconfig \
 	dot.gitignore \
 	dot.screenrc \
