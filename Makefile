@@ -7,10 +7,10 @@ DOTFILES = \
 	dot.ackrc \
 	dot.emacs.d \
 	dot.gitconfig \
+	dot.gitignore \
 	dot.screenrc \
 	dot.zsh.d \
 	dot.zshenv \
-
 
 link: $(DOTFILES)
 	$(foreach file, $^, $(RM) $(DESTDIR)/$(subst dot,,$(file));)
