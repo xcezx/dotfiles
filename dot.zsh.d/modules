@@ -1,11 +1,11 @@
 autoload -U compinit
-compinit
+compinit -u
 autoload -U colors
-colors
+colors -u
 autoload -U zfinit
-zfinit
+zfinit -u
 autoload -U promptinit
-promptinit
+promptinit -u
 autoload -U url-quote-magic
 zle -N self-insert url-quote-magic
 
