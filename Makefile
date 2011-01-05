@@ -11,7 +11,6 @@ DOTFILES = \
 	dot.zsh.d \
 	dot.zshenv \
 
-
 link: $(DOTFILES)
 	$(foreach file, $^, $(RM) $(DESTDIR)/$(subst dot,,$(file));)
 	$(foreach file, $^, $(LN) $(CURDIR)/$(file) $(DESTDIR)/$(subst dot,,$(file));)
