@@ -1,6 +1,6 @@
 bindkey -e
 
-HISTFILE="${ZDOTDIR}/.zhistory"
+HISTFILE="${HOME}/.zhistory"
 HISTSIZE=10240
 SAVEHIST=10240
 
