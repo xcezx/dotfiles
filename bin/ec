@@ -1,0 +1,4 @@
+#!/bin/sh
+EMACSCLIENT=/usr/local/bin/emacsclient
+screen -r -X select 1
+${EMACSCLIENT} -n "$@"
