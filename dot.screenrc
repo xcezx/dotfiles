@@ -20,7 +20,6 @@ bind ^G
 bind \\ quit
 bind k kill
 bind / eval "scrollback 0" "scrollback 10240"
-bind . source $HOME/.screen-setting
 
 # Split
 bind -c REGION 2 split

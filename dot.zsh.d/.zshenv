@@ -7,6 +7,11 @@ LS_COLORS=$LS_COLORS'*.tar=01;31:*.gz=01;31:*.tgz=01;31:*.bz2=01;31:*.zip=01;31:
 LS_COLORS=$LS_COLORS'*.bmp=01;35:*.jpg=01;35:*.png=01;35:*.gif=01;35:'
 export LS_COLORS
 
+GREP_OPTIONS='--color'
+export GREP_OPTIONS
+GREP_COLOR='1;32'
+export GREP_COLOR
+
 export LANG=ja_JP.UTF-8
 
 if [ -d "/opt/local/sbin" ]; then
