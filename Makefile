@@ -12,6 +12,7 @@ DOTFILES = \
 	dot.screenrc \
 	dot.zsh.d \
 	dot.zshenv \
+	dot.bazaar \
 
 link: $(DOTFILES)
 	$(RM) $(DESTDIR)/$(BINDIR)

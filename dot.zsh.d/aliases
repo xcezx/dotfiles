@@ -15,6 +15,7 @@ alias sx='screen -x'
 alias x='exit'
 
 alias g='git'
+alias b='bzr'
 
 alias -g L='| less -r'
 alias -g H='| head'
