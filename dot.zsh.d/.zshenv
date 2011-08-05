@@ -26,6 +26,10 @@ if [ -s "$HOME/.rvm/scripts/rvm" ]; then
     source $HOME/.rvm/scripts/rvm
 fi
 
+if [ -s "$HOME/.pythonbrew/etc/bashrc" ]; then
+    source $HOME/.pythonbrew/etc/bashrc
+fi
+
 if [ -d "$HOME/bin" ]; then
     PATH=$HOME/bin:$PATH
 fi
