@@ -23,6 +23,10 @@ if [ -f $ZDOTDIR/miscs ]; then
     source $ZDOTDIR/miscs
 fi
 
+if [ -f $ZDOTDIR/.zsh-local ]; then
+    source $ZDOTDIR/.zsh-local
+fi
+
 # vim: filetype=conf
 
 # Local Variables:
