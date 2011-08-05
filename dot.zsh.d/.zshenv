@@ -22,10 +22,17 @@ if [ -d "/opt/local/bin" ]; then
     PATH=/opt/local/bin:$PATH
 fi
 
+# for perlbrew
+if [ -s "$HOME/perl5/perlbrew/etc/bashrc" ]; then
+    source $HOME/perl5/perlbrew/etc/bashrc
+fi
+
+# for rvm
 if [ -s "$HOME/.rvm/scripts/rvm" ]; then
     source $HOME/.rvm/scripts/rvm
 fi
 
+# for pythonbrew
 if [ -s "$HOME/.pythonbrew/etc/bashrc" ]; then
     source $HOME/.pythonbrew/etc/bashrc
 fi
