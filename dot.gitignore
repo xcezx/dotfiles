@@ -11,3 +11,4 @@ GTAGS
 cache/*
 log/*
 *.mine.*
+.bzr*

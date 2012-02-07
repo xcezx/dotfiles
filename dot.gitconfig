@@ -3,7 +3,7 @@
 	email = main.xcezx@gmail.com
 [core]
 	pager = less -r
-	excludesfile = /home/xcezx/.gitignore
+	excludesfile = /Users/xcezx/.gitignore
 [color]
 	ui = auto
 [alias]
@@ -22,5 +22,7 @@
 	sh = stash
 	st = status
 	sub = submodule
+    subupdate = !"git submodule sync && git submodule update --init --recursive"
+    subcheckout = !"git submodule foreach git fetch; git checkout origin/master"
 [push]
 	default = current
