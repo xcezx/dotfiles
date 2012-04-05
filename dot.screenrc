@@ -1,17 +1,19 @@
-nethack         on
-escape          ^t^t
-bell_msg        "Bell in window %n: %t"
-vbell           off
+altscreen       on
 autodetach      on
-startup_message off
-defscrollback   10240
-hardstatus      on
-hardstatus      alwayslastline "%{= Wr}[%y/%m/%d %02c] %{Wk}%-w%{BW}%n %t%{-}%+w %= %1` "
+bell_msg        "Bell in window %n: %t"
 caption         splitonly "%{.BW} >> %n %t"
-msgwait         2
-termcapinfo     xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 defbce          on
+defscrollback   10240
+escape          ^t^t
+hardstatus      alwayslastline "%{= Wr}[%y/%m/%d %02c] %{Wk}%-w%{BW}%n %t%{-}%+w %= "
+hardstatus      on
+msgwait         2
+multiuser       on
+nethack         on
+startup_message off
 term            xterm-256color
+termcapinfo     xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+vbell           off
 
 # Key bind
 bind ^k
@@ -66,3 +68,8 @@ screen 2
 screen 1
 screen 0
 
+# vim: filetype=conf
+
+# Local Variables:
+# mode: Shell-script
+# End:

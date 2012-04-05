@@ -7,10 +7,8 @@ fi
 alias la='ls -al'
 alias ll='ls -lg'
 
-alias sc='ssh-agent-screen'
-alias sr='ssh-agent-screen'
+alias sc='screen -D -RR'
 alias sl='screen -ls'
-alias sx='screen -x'
 
 alias x='exit'
 

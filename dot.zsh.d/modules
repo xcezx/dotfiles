@@ -18,7 +18,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable svn git cvs hg
+zstyle ':vcs_info:*' enable svn git bzr cvs hg
 zstyle ':vcs_info:*' formats '(%s/%b)'
 zstyle ':vcs_info:svn:*' branchformat '%b:r%r'
 zstyle ':vcs_info:*' actionformats '(%s/%b|%a)'
