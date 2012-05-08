@@ -1,0 +1,14 @@
+.DS_Store
+.buildpath
+.project
+.settings
+
+GPATH
+GRTAGS
+GSYMS
+GTAGS
+.svn
+cache/*
+log/*
+*.mine.*
+.bzr*

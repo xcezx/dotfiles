@@ -1,0 +1,5 @@
+--color
+--sort-files
+--pager=less -r
+--ignore-dir=cache
+--ignore-dir=logs
