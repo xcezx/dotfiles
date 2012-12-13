@@ -24,6 +24,14 @@ if [ -s "$HOME/.rvm/scripts/rvm" ]; then
     source $HOME/.rvm/scripts/rvm
 fi
 
+# For rbenv
+if [ -d $HOME/.rbenv/bin ]; then
+    PATH=$HOME/.rbenv/bin:$PATH
+    eval "$(rbenv init -)"
+fi
+
+export PATH
+
 # Prompt
 PROMPT='(%n@%M) %(!.#.$) '
 RPROMPT='[%~]'
