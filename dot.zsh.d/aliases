@@ -9,6 +9,8 @@ alias ll='ls -lg'
 alias sc='screen -D -RR'
 alias sl='screen -ls'
 
+alias emacs='emacs -nw'
+
 alias x='exit'
 
 alias g='git'

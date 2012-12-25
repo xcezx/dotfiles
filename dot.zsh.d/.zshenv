@@ -1,5 +1,7 @@
 umask 022
 
+[[ -d "/usr/local/share/zsh-completions" ]] && fpath=(/usr/local/share/zsh-completions $fpath)
+
 # History
 HISTFILE=$HOME/.zhistory
 HISTSIZE=10240
@@ -18,6 +20,8 @@ export GREP_OPTIONS='--color'
 export GREP_COLOR='1;32'
 
 export LANG=ja_JP.UTF-8
+
+PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
 
 # For rvm
 if [ -s "$HOME/.rvm/scripts/rvm" ]; then
