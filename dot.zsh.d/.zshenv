@@ -19,15 +19,16 @@ export GREP_COLOR='1;32'
 
 export LANG=ja_JP.UTF-8
 
-# For rvm
-if [ -s "$HOME/.rvm/scripts/rvm" ]; then
-    source $HOME/.rvm/scripts/rvm
-fi
-
 # For rbenv
 if [ -d $HOME/.rbenv/bin ]; then
     PATH=$HOME/.rbenv/bin:$PATH
     eval "$(rbenv init -)"
+fi
+
+# For pyenv
+if [ -d $HOME/.pyenv/bin ]; then
+    PATH=$HOME/.pyenv/bin:$PATH
+    eval "$(pyenv init -)"
 fi
 
 export PATH
