@@ -21,13 +21,6 @@ export GREP_COLOR='1;32'
 
 export LANG=ja_JP.UTF-8
 
-PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
-
-# For rvm
-if [ -s "$HOME/.rvm/scripts/rvm" ]; then
-    source $HOME/.rvm/scripts/rvm
-fi
-
 # For rbenv
 if [ -d $HOME/.rbenv/bin ]; then
     PATH=$HOME/.rbenv/bin:$PATH

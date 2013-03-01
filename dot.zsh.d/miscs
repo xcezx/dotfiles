@@ -1,6 +1,5 @@
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
-
 if [ "$WINDOW" ]; then
     chpwd () { echo -n "_`dirs`\\" }
     preexec () {
@@ -45,4 +44,4 @@ precmd () {
     LANG=C vcs_info
     [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
 }
-RPROMPT="%1(v|%{%}%1v%{%}|) [%~]"
+RPROMPT="%1(v|%F{green}%1v%f|) [%~]"
