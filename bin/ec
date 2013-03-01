@@ -1,4 +1,8 @@
 #!/bin/sh
 EMACSCLIENT=`which emacsclient`
-screen -r -X select 1
+if [ "$TMUX" != "" ] ; then
+    tmux select-window -t 1
+elif [ "$WINDOW" != "" ] ; then
+    screen -r -X select 1
+fi
 ${EMACSCLIENT} -n "$@"

@@ -22,8 +22,7 @@
        sh = stash
        st = status
        sub = submodule
-    subupdate = !"git submodule sync && git submodule update --init --recursive"
-    subcheckout = !"git submodule foreach git fetch; git checkout origin/master"
+       subupdate = !"git submodule sync && git submodule update --init --recursive"
+       subcheckout = !"git submodule foreach git fetch; git checkout origin/master"
 [push]
        default = current
-
