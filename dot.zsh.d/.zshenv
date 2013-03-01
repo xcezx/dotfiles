@@ -34,8 +34,19 @@ if [ -d $HOME/.rbenv/bin ]; then
     eval "$(rbenv init -)"
 fi
 
+# For pyenv
+if [ -d $HOME/.pyenv/bin ]; then
+    PATH=$HOME/.pyenv/bin:$PATH
+    eval "$(pyenv init -)"
+fi
+
 export PATH
 
 # Prompt
 PROMPT='(%n@%M) %(!.#.$) '
 RPROMPT='[%~]'
+
+# for z.sh
+if [ -s `brew --prefix`/etc/profile.d/z.sh ]; then
+    source `brew --prefix`/etc/profile.d/z.sh
+fi
